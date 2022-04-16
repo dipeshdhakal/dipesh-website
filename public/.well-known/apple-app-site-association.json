@@ -1,0 +1,22 @@
+{
+  "applinks": {
+      "details": [
+           {
+             "appIDs": [ "2X8Z2D5EWJ.com.nijanand.kuljamswaroop" ],
+             "components": [
+               {
+                  "#": "no_universal_links",
+                  "exclude": true,
+                  "comment": "Matches any URL whose fragment equals no_universal_links and instructs the system not to open it as a universal link"
+               }
+             ]
+           }
+       ]
+   },
+   "webcredentials": {
+      "apps": [ "2X8Z2D5EWJ.com.nijanand.kuljamswaroop" ]
+   },
+   "appclips": {
+    "apps": ["2X8Z2D5EWJ.com.nijanand.kuljamswaroop.Clip"]
+  }
+}
