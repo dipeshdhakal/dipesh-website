@@ -2,16 +2,10 @@ import React from "react";
 import { Col, Row } from "react-bootstrap";
 import { FaSourcetree } from "react-icons/fa";
 import {
-  SiLinux,
-  SiVisualstudiocode,
-  SiPostman,
-  SiHeroku,
-  SiVercel,
   SiXcode,
   SiFigma,
   SiAppstore,
   SiFastlane,
-  SiSwift,
 } from "react-icons/si";
 
 function Toolstack() {
