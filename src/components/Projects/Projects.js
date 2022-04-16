@@ -2,12 +2,6 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.jpeg";
-import editor from "../../Assets/Projects/codeEditor.png";
-import chatify from "../../Assets/Projects/chatify.png";
-import suicide from "../../Assets/Projects/suicide.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
 
 function Projects() {
   return (
@@ -23,62 +17,61 @@ function Projects() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={chatify}
+              imgPath="https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/0d/29/57/0d2957dd-be68-0f1d-5469-6624d34d5338/AppIcon-0-0-1x_U007emarketing-0-0-0-6-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/460x0w.webp"
               isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              link="https://github.com/soumyajit4419/Chatify"
+              title="Frollo"
+              description="Personal Finance Manager App with Account linking, Budgets, Goals, Expense reports etc"
+              link="https://apps.apple.com/app/id1179563005"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={bitsOfCode}
+              imgPath="https://is5-ssl.mzstatic.com/image/thumb/Purple116/v4/73/22/94/73229468-e32e-c295-02b0-d3c18ca0681f/AppIcon-0-0-1x_U007emarketing-0-0-0-6-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/460x0w.webp"
               isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              link="https://github.com/soumyajit4419/Bits-0f-C0de"
+              title="Volt Bank"
+              description="Banking mobile app with all banking features like KYC, onboarding, account creation, payments and cards."
+              link="https://apps.apple.com/au/app/volt/id1444955456"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={editor}
+              imgPath="https://is2-ssl.mzstatic.com/image/thumb/Purple115/v4/1c/11/a3/1c11a327-f2a1-de7c-0053-70534fcfb20c/AppIcon-0-0-1x_U007emarketing-0-0-0-6-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/460x0w.webp"
               isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              link="https://github.com/soumyajit4419/Editor.io"
+              title="Pioneer Path App"
+              description="Whitelabel clone of Frollo App with different theming and slightly different functionality."
+              link="https://apps.apple.com/au/app/pioneer-path/id1265685277"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={leaf}
+              imgPath="https://is1-ssl.mzstatic.com/image/thumb/Purple125/v4/a6/04/4a/a6044a97-2d17-ab53-a14f-e78a72edc9e6/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/460x0w.webp"
               isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              link="https://github.com/soumyajit4419/Plant_AI"
+              title="AFG"
+              description="Banking as a platform Volt clone app. All banking app features with PFM features on top of it."
+              link="https://apps.apple.com/us/app/handl-by-afg/id1589001612"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={suicide}
+              imgPath="https://is2-ssl.mzstatic.com/image/thumb/Purple112/v4/77/b5/c2/77b5c247-6de4-fdc9-56ba-519b4429f261/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/460x0w.webp"
               isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              link="https://github.com/soumyajit4419/AI_For_Social_Good"
+              title="Hamro patro"
+              description="Nepalese calendar app with date conversion, media, news and many more utility."
+              link="https://apps.apple.com/us/app/hamro-patro-nepali-calendar/id401074157"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={emotion}
+              imgPath="https://is5-ssl.mzstatic.com/image/thumb/Purple118/v4/6a/04/bd/6a04bd27-d4e3-8f7a-680b-bf8ef0b8ba84/pr_source.png/460x0w.webp"
               isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              link="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
+              title="Hamro Keyboard"
+              description="iOS custom keyboard with different language layour and real time transliteration."
+              link="https://apps.apple.com/us/app/hamro-nepali-keyboard/id1276952753"
             />
           </Col>
         </Row>

@@ -1,30 +1,36 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
+import { FaSourcetree } from "react-icons/fa";
 import {
   SiLinux,
   SiVisualstudiocode,
   SiPostman,
   SiHeroku,
   SiVercel,
+  SiXcode,
+  SiFigma,
+  SiAppstore,
+  SiFastlane,
+  SiSwift,
 } from "react-icons/si";
 
 function Toolstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       <Col xs={4} md={2} className="tech-icons">
-        <SiLinux />
+        <SiXcode />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiVisualstudiocode />
+        <SiFigma />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiPostman />
+        <SiAppstore />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiVercel />
+        <SiFastlane />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiHeroku />
+        <FaSourcetree />
       </Col>
     </Row>
   );
