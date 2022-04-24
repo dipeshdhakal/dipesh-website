@@ -19,6 +19,10 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
+
+  const reload = () => window.location.reload();
+  <Route path="/.well-known/apple-app-site-association" onEnter={reload} />
+
   const [load, upadateLoad] = useState(true);
 
   useEffect(() => {
