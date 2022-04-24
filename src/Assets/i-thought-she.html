@@ -1,0 +1,638 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>I thought she&#x27;d die</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="29acd6f5-62f3-49b4-a8e4-ba405d5fc89b" class="page sans"><header><h1 class="page-title">I thought she&#x27;d die</h1></header><div class="page-body"><p id="81fda776-646f-4429-8ab0-12ec1a08d505" class="">Sunday, 28th March 2021</p><p id="4f648224-3018-4d1a-93c8-6cd2ed357db6" class="">
+</p><p id="06c1fdb9-da44-4ff7-ae42-df9d710fb6a1" class=""><strong>The  Planning</strong></p><p id="bc8ca2ff-6b64-47b7-abfc-cfe71e4c9fae" class="">I bought my Corolla few months ago but I am not a very confident driver yet. The reason being I don&#x27;t have to travel to and from the work since I work from home and also parking space in my office is expensive, even if I were to work from office. So, I don&#x27;t have much practice driving. </p><p id="f14f197c-a19b-448f-b932-c2f0dd483541" class="">My wife Suju loves travelling and going to new places. That makes her happy and I love making her happy. We are among the few blessed couple who have luxury to become absolutely free during all weekends. I have seen people not being able to afford this and it is terrible. We value our time together. Of course, have made some sacrifices for this, for example delaying to have a child but it is worth every second.</p><p id="90fae3be-d864-424f-8815-4710e18375b9" class="">Although we are free every weekend, we don&#x27;t go out often except for the shopping. This weekend was a perfect one to go out because last week we had massive shower resulting flooding in different parts of NSW. </p><p id="093123fe-2919-4c16-b23f-407e0c2579f6" class="">Her desire to visit new place, my willingness to drive more and the perfection of weather made us decide to go out somewhere. As always, she decides to choose the destination and she said &quot;Palm Beach&quot;. Why? I mean is that even a question? For starters, she is my wife and I really don&#x27;t care where we go as long as I can drive and more importantly she is happy.</p><p id="5b1cc1f7-bdcd-453e-92f8-386076188bdf" class="">
+</p><p id="d12b9e74-c665-4157-a0ea-9fa507f600f5" class=""><strong>The Trip</strong></p><p id="493eee99-b73c-42af-862a-49574de04ae4" class="">We had small breakfast (should&#x27;ve had more but I will come back to that later) at around 10 in the morning, started the journey with stop to petrol pump, had my car gassed, checked tyre pressure and we hit the road. Honestly, this time driving was lot easy that I thought. It was mostly because the route was super easy, I would have to do turns every 8 / 10 kms and sometimes even more. </p><p id="04b76930-1612-44ad-a1e1-4aad8287698d" class="">We reached the beach after 1 hour and 50 minutes travel and it was on the hill top. But wait, didn&#x27;t you say beach? Yeah you got me there, actually it was google map navigation that took us to hill top. Some idiot tagged that place as palm beach and another idiot (which is myself) didn&#x27;t bother to verify that. Sometimes you aren&#x27;t as smart as you think. Anyways, we came down the hill and finally reached the beach, parked the car and started walking.</p><p id="29b636cc-4e64-4fba-bb7d-ccc92531b6ab" class="">
+</p><p id="ec4bdd6e-6d8f-4bf1-822b-6ddcf5ed08ca" class=""><strong>The Lighthouse</strong></p><p id="dcd0c367-4bf7-4588-a10a-6762eda9d7ef" class="">What are the odds for having to go for hiking in a beach? Zero right? Thats what I thought too (again, not very smart). As I was looking at the sea, my wife points to a structure on top of the hill, and it was a lighthouse. As soon as she did that I knew she wanted to go there. As much as I want her to fulfil her every wish, there are some lines we draw. I insisted not to go because A, we weren&#x27;t prepared for that and B, we weren&#x27;t freaking prepared. We just had small breakfast, it was a stressful long drive for me, we weren&#x27;t dressed for hiking, didn&#x27;t have water with us, it was sunny / humid day and it could go on and on... We had clear difference in opinion and after a while guess who won? Well, I wont even answer that. I mean don&#x27;t tell me I always loose to my wife but hey I also want her to be happy right?</p><p id="f3d943c9-be35-480e-b606-24c1d387560c" class="">
+</p><p id="37504716-ba00-456d-9713-93a4e805a3e0" class=""><strong>The Hike</strong></p><p id="6c598992-9d6b-4fb2-a4e9-9e68535bce5d" class="">Right from the beach, you have to climb up to the hilltop. There were two routes, one stiff which they said would take 15 minutes, and another comparatively easier which is estimated to take 20 minutes. However, I think it takes little longer that that but I don&#x27;t know for sure maybe because of (spoiler alert) the incident. I decided to take the shorter but more difficult route (guilt number 1) and she didn&#x27;t resisted so we began to walk. </p><p id="73747fd2-1f0e-43dd-b562-107b67f47e9d" class="">Naturally I was moving faster ahead of her and constantly asking her to keep moving. I have good stamina although my job is to sit on a chair and look at my laptop. I used to play football / futsal for long period of time. I run in park occasionally and I am not being sexist here but I am a man. Obviously, I knew she isn&#x27;t as fit as me but I didn&#x27;t know she had that low energy (guilt number 2). For a brief moment, we stopped at one point took some videos and slow-mo for her (she loves that), then began moving again. This time she was left even further behind. I again ask her keep moving (I will stop my guilt count here) because I felt like all those motivational speakers in movies. You know the coaches of sports team southing to go hard for it and eventually they win. But life isn&#x27;t a movie, is it?</p><p id="04242306-e5cd-45cc-b372-4318a00913fe" class="">
+</p><p id="c235b5ec-12fb-4b05-bcec-6e05396046ff" class=""><strong>The 2+ minutes</strong></p><p id="64645dfc-a333-40d8-bbb6-792ad72d8db8" class="">First thing first, she fainted for 2+ minutes and at one point I thought she was dying. It was probably between 2 to 3 minutes but I can write a whole novel on those minutes. I could break it to every nanoseconds and it still wouldn&#x27;t be an exaggeration. </p><p id="21df0887-f218-4a30-9ecd-1ec360a7d365" class="">So as I was walking, I heard her saying she wants to quit hiking. &quot;Are you crazy?&quot;, I said. We were around 80 percent to the top already. She said she is feeling dizzy and sat on a rock. Now I feel so lucky she sat on that rock because that was the biggest one around. I came to her, sat by her side for some rest. She put her head on my shoulder for around a minute and she lost control of her body. First, I thought she was acting as she does that often. But soon I realised that it was serious. I tried to hold her with one hand first but couldn&#x27;t. I stood up grabbed her body with both my hands and keep calling her name. She didn&#x27;t respond and I saw her eyes were full while, I couldn&#x27;t see her eyeball and I freaked out. We were in extremely uncomfortable place, I could not even find a flat surface to rest her body. The slippy stairs made of uneven stones was around 20cm in width with sharp rocks on both sides and wild bush following that. I was alone and I could not see anyone for help. I knew I had to call emergency but if I had to take my phone with one hand, I might loose her and she might fall. By the way when I say fall, I mean fall-falll, maybe around 500 meters below where she would find a rock to hold if she was lucky. It was already a minute and I didn&#x27;t know what to do. I kept calling her in wild hope that she would respond and started to think I would loose her there. Then I heard some people and as I turned around, I saw two couple right in front of me and asked for help. </p><p id="4107f62c-831e-45d1-8472-50e0d6687320" class="">They were too king to offer help. One guy asked me to lie her down and other gave me some water I had asked for. I put some water inside her mouth and still she wouldn&#x27;t respond. This is the moment that hits me the hardest. Still I don&#x27;t know how I feel when i remember that. I guess my idea of putting water in her mouth was referenced from our culture of letting people drink water before they die. I have seen that family members doing to extremely ill people who have no hope of living whatsoever. </p><p id="477b9577-cd87-41da-9eb3-f5c8f926d86c" class="">Anyways, the other guy and me rolled her laterally and as we were doing just that she coughed and I could breathe again. After couple of cough and vomiting the water in her mouth she called my pet name &quot;Budo&quot;. I don&#x27;t really know how I felt at that point but I guess I was just so relieved that I didn&#x27;t want to think of anything anymore. I was probably blacked out for a while. My hands were shaking as I held her but that was ok. I mean everything was okay. Somebody could tell the entire world is burning but I would not care. Why would I? Even if we were to die, now we could die together. </p><p id="79449d6a-a8fc-4f51-8403-58049cbde5e7" class="">
+</p><p id="fc0a6dac-0937-44e8-9a2c-7d310bbc2d44" class=""><strong>The rescue</strong></p><p id="e6dd9a48-3c2f-4399-b355-59dc84912b40" class="">While all the above was happening there were already couple of people calling emergency services. The operator wanted to talk with me so a lady handed her phone over to me. They asked some questions about her health, her breathing etc and assured me the help would arrive soon and there was nothing to worry about. Some hikers gave us more water, an apple for her and a bar of chocolate. They stayed there for a while and we thanked them asked them to leave since we wouldn&#x27;t want them to ruin their trip. I don&#x27;t remember their names, I will soon forget their faces as well but I will be forever grateful to them. By that time she was okay, talking to me and we already started to making fun of the incident. I have this extraordinary quality of hiding my emotions from my face so I was already smiling and joking about how much this thing would cost us financially. To be honest, I didn&#x27;t cared a bit. She will probably never realised how I felt but thats okay, remember? the goal is to make her happy. I will skip the next part because it was a very normal rescue procedure. Actually, they had to locate us using drone and that was pretty fancy.</p><p id="260bbec2-8874-4cf2-bbdf-f5777786c357" class="">
+</p><p id="62abb065-93ab-4c5b-adec-c309d6a53f56" class=""><strong>Lesson Learnt</strong></p><p id="e0fa2022-0326-4e81-9509-826435f88d9d" class="">I learnt many thing that day. Mainly about the hike planning, making sure you eat enough, carry water, hydrate etc but that wasn&#x27;t all. In fact that wasn&#x27;t any important learning. I mean you could find 100s of videos in youtube for those tips. Why would you risk your wife&#x27;s life and your entire future for that?</p><p id="d2714c7c-7b88-4169-8879-6ee703abd4ba" class="">I will try to become as less philosophical as possible but it was truely a life changing event for me. I always thought I loved my wife to the fullest. I mean I used to think there isn&#x27;t a way to lover her more that I do today. Turns out, I love her more after that day. If you ask me how, or what more do you love than before, I can&#x27;t answer that. The good thing is I don&#x27;t have to answer. But every time I see her now, I wonder what would have happened if she never woke up that day. This makes me feel grateful of out time today. </p><p id="ed6b884c-1ec5-465d-a633-c2b7d2bbfa6b" class="">The way I see it, it was probably a very minor health incident. Hikers probably experience that in regular basics. But since it happened to me for the first time, in that location and to the person I loved most, it will forever have a deep impact on me. I will never forget this in my life and you will never get back the time you spent for reading this 😋.</p><p id="917d0960-558f-48b9-a388-4ed929da94aa" class="">
+</p><p id="fb4f1ef6-1ba9-4346-9899-3076da18fcad" class="">Cheers!!! </p><p id="80392cf8-a233-4ce2-8b77-7c7f0e57e01a" class="">
+	 <img src="../Assets/suju_trim.gif" style='width:80%;' border="0" alt="Null">
+  	<img src="../Assets/me_trip.gif" style='width:80%;' border="0" alt="Null">
+</p></div></article></body></html>
