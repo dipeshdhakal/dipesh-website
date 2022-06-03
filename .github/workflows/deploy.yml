@@ -16,12 +16,12 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - name: Clean Cache
-        run: npm cache clean --force
       - name: Install dependencies
         run: npm install    
       - name: Generate build
         run: npm run build
+        env:
+          CI: false
       - name: Share artifact inside workflow
         uses: actions/upload-artifact@v1
         with:
