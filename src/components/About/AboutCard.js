@@ -12,7 +12,7 @@ function AboutCard() {
             <br />
             <br />
             I am just another human being who loves building tech that solves real world problems.
-            I love code refactoring and optimisation. 
+            I love code refactoring and optimisation.
             <br />
             <br />
             Apart from my day to day job, I love

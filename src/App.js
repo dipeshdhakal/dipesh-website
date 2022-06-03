@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Blogs from "./components/Blogs/Blogs";
+import Blog1 from "./components/Blogs/Blog1";
 import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer";
 import Resume from "./components/Resume/ResumeNew";
@@ -19,9 +20,6 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
-
-  const reload = () => window.location.reload();
-  <Route path="/.well-known/apple-app-site-association" onEnter={reload} />
 
   const [load, upadateLoad] = useState(true);
 
@@ -45,6 +43,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blog1" element={<Blog1 />} />
           <Route path="*" element={<Navigate to="/"/>} />
         </Routes>
         <Footer />
